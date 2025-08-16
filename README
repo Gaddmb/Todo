@@ -1,0 +1,71 @@
+# TodoListe
+
+Une application de gestion de tâches (Todo List) développée en React avec TypeScript et Vite.  
+Le backend sera ajouté ultérieurement.
+
+## Fonctionnalités
+
+- Affichage de la liste des tâches
+- Ajout d’une nouvelle tâche
+- Suppression d’une tâche
+- Mise à jour du statut d’une tâche (en attente / terminée)
+- Gestion des erreurs d’API côté frontend
+
+## Structure du projet
+
+```
+frontend/
+  src/
+    components/      # Composants React (TaskForm, TaskItem, TaskList)
+    services/        # Appels à l’API (api.ts)
+    types/           # Types TypeScript (Task.ts)
+    App.tsx          # Composant principal
+    main.tsx         # Point d’entrée de l’application
+    App.css          # Styles principaux
+public/
+backend/             # (à venir)
+```
+
+## Installation
+
+1. **Cloner le dépôt**
+
+   ```sh
+   git clone <url-du-repo>
+   cd todoListe
+   ```
+
+2. **Installer les dépendances**
+
+   ```sh
+   npm install
+   ```
+
+3. **Lancer le projet en développement**
+   ```sh
+   npm run dev
+   ```
+4. **Accéder à l’application**  
+   Ouvre [http://localhost:5173](http://localhost:5173) dans ton navigateur.
+
+## Scripts utiles
+
+- `npm run dev` : Démarre le serveur de développement Vite
+- `npm run build` : Build du projet pour la production
+- `npm run preview` : Prévisualisation du build
+- `npm run lint` : Lint du code avec ESLint
+
+## Technologies utilisées
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Axios](https://axios-http.com/)
+
+## Backend
+
+Le backend sera ajouté prochainement dans le dossier [`backend/`](backend/).
+
+---
+
+\*Projet réalisé dans le cadre d’un
