@@ -1,4 +1,4 @@
-import type { Task } from '../types/Task';
+import type { Task } from '@shared/types/Task';
 
 interface TaskItemProps {
   task: Task;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Task } from '../types/Task';
+import type { Task } from '@shared/types/Task';
 import { getTasks, deleteTask, updateTaskStatus } from '../services/api';
 import { TaskItem } from './TaskItem';
 

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "baseUrl": ".",                 // Nécessaire pour les paths
+    "paths": {
+      "@shared/*": ["shared/*"]    // Alias pour le dossier shared
+    }
+  },
+  "include": ["shared"]
+}
+
+
+// me permet de partager le fichier tasks.ts avec le back 

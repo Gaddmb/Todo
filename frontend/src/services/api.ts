@@ -1,6 +1,8 @@
 // src/api/api.ts
 import axios from "axios";
-import type { Task, CreateTaskData,  } from "../types/Task";
+import type { Task, CreateTaskData,  } from "@shared/types/Task";
+// alias pour un import propres 
+
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 // Vérification de l'URL de base si elle est undefined
