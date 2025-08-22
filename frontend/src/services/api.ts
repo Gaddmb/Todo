@@ -1,13 +1,14 @@
 // src/api/api.ts
 import axios from "axios";
-import type { Task, CreateTaskData } from "../types/Task";
+import type { Task, CreateTaskData,  } from "../types/Task";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-// Vérification de l'URL de base si elle est définie
+// Vérification de l'URL de base si elle est undefined
 // if(!API_BASE_URL) {
 //   throw new Error("VITE_API_BASE_URL est undefined");    }
 
 
+// je crée mon instance personalisée d'axios
 const api = axios.create({
   baseURL: API_BASE_URL,
 });
@@ -46,7 +47,8 @@ api.interceptors.response.use(
 // GET /tasks - Récupérer toutes les tâches
 export const getTasks = async (): Promise<Task[]> => {
   const response = await api.get<Task[]>("/tasks");
-  return response.data;
+  return  response.data;
+  
 };
 
 // POST /tasks - Créer une nouvelle tâche

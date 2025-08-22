@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { TaskList } from './components/TaskList';
 import { TaskForm } from './components/TaskForm';
-
 import type{ CreateTaskData } from './types/Task';
+
+
 
 function App() {
   const [refreshKey, setRefreshKey] = useState(0);
 
  const handleAddTask = async (taskData: CreateTaskData) => {
   try {
-    // await createTask(taskData); // ← Commentez cette ligne
-    console.log('Tâche à ajouter:', taskData); // ← Ajoutez ça
+    
+    console.log('Tâche à ajouter:', taskData); 
     setRefreshKey(prev => prev + 1);
   } catch (error) {
     console.error('Erreur lors de l\'ajout:', error);
@@ -22,7 +23,6 @@ function App() {
       <h1>Gestionnaire de Tâches</h1>
       
       <TaskForm onSubmit={handleAddTask} />
-      
       <TaskList key={refreshKey} />
     </div>
   );

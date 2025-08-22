@@ -6,6 +6,8 @@ export interface Task {
     status: "pending" | "done";
 }
 
+
+
 // Interface PARTIELLE - pour créer une nouvelle tâche
 export interface CreateTaskData {
     title : string

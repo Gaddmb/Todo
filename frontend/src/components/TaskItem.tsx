@@ -13,6 +13,7 @@ export const TaskItem = ({ task, onDelete, onToggleStatus }: TaskItemProps) => {
       <p>{task.description}</p>
       <p>Status: <strong>{task.status}</strong></p>
       
+       {/* j'appelle la fonction que le parent m'a passé pour supprimer la tâche */}
       <button onClick={() => onDelete(task.id)}>
         Supprimer
       </button>
@@ -25,3 +26,5 @@ export const TaskItem = ({ task, onDelete, onToggleStatus }: TaskItemProps) => {
     </div>
   );
 };
+
+
