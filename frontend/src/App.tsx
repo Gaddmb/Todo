@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { TaskList } from './components/TaskList';
 import { TaskForm } from './components/TaskForm';
-import type{ CreateTaskData } from '../../shared/types/Task';
+import type{ CreateTaskData } from '../../shared/types/task';
 
 
 

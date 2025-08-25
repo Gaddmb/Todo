@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import { Task } from '../../shared/types/task'
+import { Task } from '../../shared/types/task';
 import { z } from "zod";
 
 let tasks: Task[] = []
@@ -15,3 +15,5 @@ const taskSchema = z.object({
 export const getTasks = ()=>{}
 export const createTask = () => {}
 export const deleteTask = () => {}
+
+

@@ -1,6 +1,6 @@
 // src/api/api.ts
 import axios from "axios";
-import type { Task, CreateTaskData,  } from "@shared/types/Task";
+import type { Task, CreateTaskData,  } from "@shared/types/task";
 // alias pour un import propres 
 
 

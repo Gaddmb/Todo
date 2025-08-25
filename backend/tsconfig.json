@@ -4,10 +4,9 @@
     "target": "ES2022",
     "module": "CommonJS",
     "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": ".",                
+    "baseUrl": ".",
     "paths": {
-      "@shared/*": ["../shared/*"]   
+      "@shared/*": ["../shared/*"]
     }
   },
   "include": ["src", "../shared"]
