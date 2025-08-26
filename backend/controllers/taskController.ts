@@ -55,7 +55,7 @@ export const deleteTask = (req:Request , res:Response) => {
 
 
 
-// PATCH /api/tasks/:id
+
 export const updateTaskStatus = (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const { status } = req.body;
