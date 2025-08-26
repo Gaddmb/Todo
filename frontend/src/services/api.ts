@@ -1,6 +1,8 @@
 // src/api/api.ts
 import axios from "axios";
 import type { Task, CreateTaskData,  } from "@shared/types/task";
+
+
 // alias pour un import propres 
 
 
@@ -11,9 +13,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 
 // je crée mon instance personalisée d'axios
-const api = axios.create({
-  baseURL: API_BASE_URL,
-});
+const api = axios.create({baseURL: API_BASE_URL,});
 
 
 //  Intercepteur des réponses (gestion globale des erreurs)
@@ -46,35 +46,31 @@ api.interceptors.response.use(
 );
 
 
-// GET /tasks - Récupérer toutes les tâches
+// je recupere les données
 export const getTasks = async (): Promise<Task[]> => {
-  const response = await api.get<Task[]>("/tasks");
-  return  response.data;
-  
+  const response = await api.get("/tasks");
+  return response.data.tasks; // 
 };
 
-// POST /tasks - Créer une nouvelle tâche
+// je crée une tache
 export const createTask = async (taskData: CreateTaskData): Promise<Task> => {
-  const response = await api.post<Task>("/tasks", taskData);
-  return response.data;
+  const response = await api.post("/tasks", taskData);
+  return response.data.task; //
 };
 
-// DELETE /tasks/:id - Supprimer une tâche
+
+// je supprime une tache
 export const deleteTask = async (id: number): Promise<void> => {
   await api.delete(`/tasks/${id}`);
 };
 
-// PATCH /tasks/:id - Mettre à jour le statut (bonus)
+// je met à jour le status d'une tache
 export const updateTaskStatus = async (
   id: number,
   status: "pending" | "done"
 ): Promise<Task> => {
-  const response = await api.patch<Task>(`/tasks/${id}`, { status });
-  return response.data;
+  const response = await api.patch(`/tasks/${id}`, { status });
+  return response.data.task; 
 };
-
-export default api;
-
-
 // fichier API qui va me permettre de faire des appels à l'API
 

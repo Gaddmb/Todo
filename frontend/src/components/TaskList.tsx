@@ -12,30 +12,20 @@ export const TaskList = () => {
     loadTasks();
   }, []);
 
-  const loadTasks = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const fetchedTasks = await getTasks();
-      
+ const loadTasks = async () => {
+  try {
+    setLoading(true);
+    setError(null);
+    const fetchedTasks = await getTasks();
+    setTasks(fetchedTasks); 
+  } catch (err) {
+    setError('Erreur lors du chargement des tâches');
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
 
-       if (Array.isArray(fetchedTasks)) {
-      setTasks(fetchedTasks);
-    } else {
-      
-      setTasks([]); // Tableau vide par défaut
-      setError('Format de réponse incorrect');
-    }
-
-
-    
-    } catch (err) {
-      setError('Erreur lors du chargement des tâches');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleDelete = async (id: number) => {
     try {
