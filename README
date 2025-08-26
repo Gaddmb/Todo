@@ -64,8 +64,56 @@ backend/             # (à venir)
 
 ## Backend
 
-Le backend sera ajouté prochainement dans le dossier [`backend/`](backend/).
+Backend
+
+Le backend est développé en Node.js, Express et TypeScript avec validation des données via Zod.
+Il fournit une API REST pour la gestion des tâches.
+
+Fonctionnalités
+
+Récupération de toutes les tâches
+
+Création d’une nouvelle tâche
+
+Suppression d’une tâche
+
+Validation des données avec Zod
+
+Types partagés entre frontend et backend
+
+## Installation
+
+Se placer dans le dossier backend
+
+cd backend
+
+## Installer les dépendances
+
+npm install
+
+## Lancer le serveur en développement
+
+npm run dev
+
+## Accéder à l’API
+
+Le serveur est disponible sur http://localhost:3001/api
+.
+
+## Scripts utiles
+
+- `npm run dev` : Démarre le serveur en développement avec ts-node-dev
+
+- `npm run build` : Compile le projet en JavaScript
+
+- `npm start `: Lance le serveur compilé
+
+## Endpoints API
+
+GET /api/tasks : Récupérer toutes les tâches
+
+POST /api/tasks : Créer une nouvelle tâche
+
+DELETE /api/tasks/:id : Supprimer une tâche
 
 ---
-
-\*Projet réalisé dans le cadre d’un
