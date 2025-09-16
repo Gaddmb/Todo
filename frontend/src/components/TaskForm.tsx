@@ -6,7 +6,7 @@ interface TaskFormProps {
   onSubmit: (taskData: CreateTaskData) => void;
 }
 
-// function que je vais passé au composant parent pour ajouter une nouvelle tâche
+// function que je vais passé au composant parent pour ajouter une nouvelle tâch
 export const TaskForm = ({ onSubmit }: TaskFormProps) => {
   //  État local pour stocker les valeurs des champs du formulaire
   const [title, setTitle] = useState<string>('');

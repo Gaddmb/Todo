@@ -17,7 +17,7 @@ function App() {
       setRefreshKey(prev => prev + 1);
     } catch (error) {
       console.error('Erreur lors de l\'ajout:', error);
-      alert('Erreur lors de l\'ajout de la tâche');
+      alert('Erreur lors de l\'ajout  de tache');
     }
   };
 

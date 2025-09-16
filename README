@@ -64,12 +64,10 @@ backend/             # (à venir)
 
 ## Backend
 
-Backend
-
 Le backend est développé en Node.js, Express et TypeScript avec validation des données via Zod.
 Il fournit une API REST pour la gestion des tâches.
 
-Fonctionnalités
+## Fonctionnalités
 
 Récupération de toutes les tâches
 
@@ -80,6 +78,14 @@ Suppression d’une tâche
 Validation des données avec Zod
 
 Types partagés entre frontend et backend
+
+## Structure du projet
+
+backend/
+controllers/ # Contrôleurs Express (taskController.ts)
+routes/ # Routes API (taskRoutes.ts)
+server.ts # Point d’entrée du serveur
+shared/types/ # Types partagés (Task.ts)
 
 ## Installation
 
