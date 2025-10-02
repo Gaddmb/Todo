@@ -72,5 +72,5 @@ export const updateTaskStatus = async (
   const response = await api.patch(`/tasks/${id}`, { status });
   return response.data.task; 
 };
-// fichier API qui va me permettre de faire des appels à l'API
+// fichier API qui va me permettre de faire des appels à l'APII
 
