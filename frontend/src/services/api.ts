@@ -59,7 +59,7 @@ export const createTask = async (taskData: CreateTaskData): Promise<Task> => {
 };
 
 
-// je supprime une tache
+// je supprime une tach
 export const deleteTask = async (id: number): Promise<void> => {
   await api.delete(`/tasks/${id}`);
 };
